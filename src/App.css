@@ -1,38 +1,69 @@
 .App {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background: transparent;
+  color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  padding: 8px;
+  border-radius: 1%; 
+  background-color: antiquewhite;
+}
+
+form{
+  height: 45em;
+}
+
+h1, h3 {
   text-align: center;
+  color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: light;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input, form select {
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form input[type='range'] {
+  width: 50vh;
+}
+form input{
+  width: 50vh;
 }
 
-.App-link {
-  color: #61dafb;
+form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+form button:hover {
+  background-color: #45a049;
+}
+
+form span {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* making the App form responsive */
+@media screen and (max-width: 480px) {
+  form input[type='range'] {
+    width: 100%;
   }
 }
